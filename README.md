@@ -1,5 +1,9 @@
 # dynarray
 
+Licence: MIT
+Author: Robin Freyler (C) 2016
+Depencencies: none*
+
 Slightly adjusted custom implementation for std::experimental::dynarray container.
 This version of this container in contrast is not designed to be used with stack allocation schemes
 and so requires heap memory (like std::vector) to store its elements.
@@ -18,3 +22,5 @@ which can be important in memory critical applications.
 
 The major disadvantage is that it cannot shrink or grow in size after initial construction
 of an instance of this container.
+
+(* not counting C++ standard library dependencies)
