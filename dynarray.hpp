@@ -436,12 +436,12 @@ auto utils::dynarray<T>::back() const -> const_reference {
 
 template<typename T>
 auto utils::dynarray<T>::data() -> pointer {
-	return m_data.data();
+	return m_data.get();
 }
 
 template<typename T>
 auto utils::dynarray<T>::data() const -> const_pointer {
-	return m_data.data();
+	return m_data.get();
 }
 
 //============================================================
@@ -473,33 +473,33 @@ void utils::dynarray<T>::fill(T const& value) {
 
 template<typename T>
 auto utils::dynarray<T>::begin() -> iterator {
-	return m_data.data();
+	return m_data.get();
 }
 
 template<typename T>
 auto utils::dynarray<T>::begin() const -> const_iterator {
-	return m_data.data();
+	return m_data.get();
 }
 
 template<typename T>
 auto utils::dynarray<T>::cbegin() const -> const_iterator {
-	return m_data.data();
+	return m_data.get();
 }
 
 
 template<typename T>
 auto utils::dynarray<T>::end() -> iterator {
-	return m_data.data() + size();
+	return m_data.get() + size();
 }
 
 template<typename T>
 auto utils::dynarray<T>::end() const -> const_iterator {
-	return m_data.data() + size();
+	return m_data.get() + size();
 }
 
 template<typename T>
 auto utils::dynarray<T>::cend() const -> const_iterator {
-	return m_data.data() + size();
+	return m_data.get() + size();
 }
 
 
