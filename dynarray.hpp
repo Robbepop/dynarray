@@ -451,7 +451,7 @@ auto utils::dynarray<T>::data() const -> const_pointer {
 
 template<typename T>
 auto utils::dynarray<T>::empty() const -> bool {
-	return m_size == 0;
+	return !m_data.get();
 }
 
 template<typename T>
